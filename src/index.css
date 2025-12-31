@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar-hide";
+
+@base {
+ 
+    td{
+        border:2px 2px 2px 2px;
+    }
+
+}
