@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 import './App.css'
 import Login from './component/Auth/Login'
 import AdminDashboard from './component/Dashboard/AdminDashboard'
 import EmployeeDashboard from './component/Dashboard/EmployeeDashboard'
-import { AuthContext } from './Context/AuthProvider'
-import { setLocalStorage, getLocalStorage } from './Utils/LocalStorage'
-import LoadingBar from 'react-top-loading-bar'
 import CheatSheet from './component/Others/CheatSheet'
+import { AuthContext } from './Context/AuthProvider'
+import { getLocalStorage, setLocalStorage } from './Utils/LocalStorage'
+console.log("Hello")
+
 
 function App() {
   const [progress, setProgress] = useState(0)
@@ -16,7 +18,7 @@ function App() {
 
   useEffect(() => {
   //  localStorage.clear()
-  //  setLocalStorage()
+   setLocalStorage()
     getLocalStorage()
     console.log("Hello")
      const loggedInUser = localStorage.getItem("loggedInUser")
